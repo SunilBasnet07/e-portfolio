@@ -54,13 +54,19 @@ const TypingAnimation = ({ text, speed = 150 }) => {
 
 // Profile image with fallback
 const ProfileImage = ({ animate }) => {
+  // Use a conditional check for the import to avoid build issues
+  // If the image import fails, we'll use a fallback
+  const imagePath = typeof profileImage !== 'undefined' && profileImage.src 
+    ? profileImage.src 
+    : '/team5.jpeg'; // Fallback to a file in the public directory
+    
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8 }}
       className={styles.profileImage}
-      style={{ backgroundImage: `url(${profileImage.src})` }}
+      style={{ backgroundImage: `url(${imagePath})` }}
     >
       <motion.div
         className={styles.pulse}
