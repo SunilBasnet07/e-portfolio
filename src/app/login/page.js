@@ -102,7 +102,7 @@ export default function Login() {
         </form>
         
         <div className={styles.authLinks}>
-          <p>Don't have an account? <Link href="/register" className={styles.authLink}>Register</Link></p>
+          <p>Don&apos;t have an account? <Link href="/register" className={styles.authLink}>Register</Link></p>
           <Link href="/" className={styles.authLink}>Back to Homepage</Link>
         </div>
       </motion.div>

@@ -110,7 +110,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className={styles.heroTitle}
             >
-              Hi, I'm <TypingAnimation text={["Your Name", "a Developer", "a Designer", "a Creator"]} speed={100} />
+              Hi, I&apos;m <TypingAnimation text={["Your Name", "a Developer", "a Designer", "a Creator"]} speed={100} />
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -155,7 +155,7 @@ export default function Home() {
             <div className={styles.grid2Cols}>
               <div>
                 <p className={styles.textGray}>
-                  I'm a passionate developer with a strong background in web development.
+                  I&apos;m a passionate developer with a strong background in web development.
                   I love creating beautiful, functional, and user-friendly applications.
                 </p>
                 <div className={styles.spaceY4}>
