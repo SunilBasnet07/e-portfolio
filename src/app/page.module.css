@@ -1,0 +1,396 @@
+/* Layout Styles */
+.container {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.bgWhite {
+  background-color: white;
+}
+
+.bgLight {
+  background-color: #f3f4f6;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+/* Typography */
+.sectionTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.subsectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.textGray {
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
+
+.textAccent {
+  color: #2563eb;
+}
+
+/* Button Styles */
+.btnPrimary {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s;
+}
+
+.btnPrimary:hover {
+  background-color: #1d4ed8;
+}
+
+.btnFull {
+  width: 100%;
+}
+
+/* Tag Styles */
+.skillTag {
+  background-color: #f3f4f6;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Hero Section */
+.heroSection {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .heroContent {
+    flex-direction: row;
+    gap: 4rem;
+    align-items: center;
+    text-align: left;
+  }
+  
+  .heroTextContainer {
+    text-align: left;
+  }
+}
+
+.heroTextContainer {
+  max-width: 36rem;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+.typingText {
+  display: inline-block;
+  position: relative;
+}
+
+.typingText::after {
+  content: "|";
+  position: absolute;
+  right: -8px;
+  animation: cursor 1s infinite;
+}
+
+@keyframes cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+}
+
+.profileImage {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  background-color: #f3f4f6;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.profileImage:hover {
+  transform: scale(1.05);
+  border-color: #2563eb;
+}
+
+@media (max-width: 768px) {
+  .profileImage {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+.fallbackInitials {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #2563eb;
+  background: linear-gradient(135deg, #dbeafe, #eff6ff);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pulse {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  opacity: 0;
+  transform: scale(1);
+  z-index: -1;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.7;
+    transform: scale(1);
+    border: 4px solid rgba(37, 99, 235, 0.2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.3);
+    border: 4px solid rgba(37, 99, 235, 0);
+  }
+}
+
+/* About Section */
+.aboutImage {
+  background-color: #f3f4f6;
+  height: 16rem;
+  border-radius: 0.5rem;
+}
+
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.spaceY4 > * + * {
+  margin-top: 1rem;
+}
+
+/* Grid Utilities */
+.grid2Cols {
+  display: grid;
+  gap: 2rem;
+}
+
+.grid3Cols {
+  display: grid;
+  gap: 2rem;
+}
+
+/* Project Section */
+.projectCard {
+  background-color: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.projectImage {
+  height: 12rem;
+  background-color: #f3f4f6;
+}
+
+.projectContent {
+  padding: 1.5rem;
+}
+
+.projectTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.projectDescription {
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.tagsContainer {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.projectTag {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+}
+
+.tagBlue {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.tagGreen {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.linksContainer {
+  display: flex;
+  gap: 1rem;
+}
+
+.projectLink {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.projectLink:hover {
+  text-decoration: underline;
+}
+
+.projectLinkSecondary {
+  color: #4b5563;
+  text-decoration: none;
+}
+
+.projectLinkSecondary:hover {
+  text-decoration: underline;
+}
+
+/* Resume Section */
+.resumeDescription {
+  color: #4b5563;
+  margin-bottom: 2rem;
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Contact Section */
+.contactContainer {
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contactForm {
+  margin-bottom: 3rem;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formLabel {
+  display: block;
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+}
+
+.formInput,
+.formTextarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-family: inherit;
+}
+
+.formInput:focus,
+.formTextarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.socialLink {
+  color: #4b5563;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.socialLink:hover {
+  color: #2563eb;
+}
+
+/* Responsive Utilities */
+@media (min-width: 768px) {
+  .heroTitle {
+    font-size: 4rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.5rem;
+  }
+  
+  .grid2Cols {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid3Cols {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+} 
