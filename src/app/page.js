@@ -110,7 +110,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className={styles.heroTitle}
             >
-              Hi, I&apos;m <TypingAnimation text={["Your Name", "a Developer", "a Designer", "a Creator"]} speed={100} />
+              Hi,I&apos;m <TypingAnimation text={["Sunil Basnet", "a Developer", "a Designer", "a Creator"]} speed={100} />
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
